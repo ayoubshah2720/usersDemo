@@ -1,0 +1,22 @@
+<div class="displayList container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Mobile#</th>
+            <th scope="col">Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of allUsers">
+                <td>{{user.firstName}}</td>
+                <td>{{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.mobileNumber}}</td>
+                <td>{{user.salary}}</td>
+            </tr>
+        </tbody>
+      </table>
+</div>
