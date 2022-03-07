@@ -1,8 +1,12 @@
 .mainAddUser{
     min-height: 600px;
     width: 100%;
+    display: flex;
     .formAndDisplay{
         width: 50%;
+        .errorMsg{
+            color: red;
+        }
     }
     .submitBtn{
         cursor: pointer;

@@ -1,31 +1,31 @@
-<div class="mainAddUser" style="display: flex;">
+<div class="mainAddUser">
     <div class="formAndDisplay">
         <form [formGroup]="userForm" class="formTag">
             <div class="form-group">
-                <label for="exampleInputEmail1">First Name</label>
-                <input type="text" autocomplete="off" class="form-control" formControlName="firstName" id="exampleInputEmail1" aria-describedby="emailHelp"
+                <label>First Name</label>
+                <input type="text" autocomplete="off" class="form-control" formControlName="firstName" aria-describedby="emailHelp"
                     placeholder="Enter First Name">
-                <span style="color: red;" *ngIf="firstName && firstName.invalid && firstName.touched">First Name is Required</span>
+                <span class="errorMsg" *ngIf="firstName && firstName.invalid && firstName.touched">First Name is Required</span>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Last Name</label>
-                <input type="text" autocomplete="off" class="form-control" formControlName="lastName" id="exampleInputPassword1" placeholder="Enter Last Name">
-                <span style="color: red;" *ngIf="lastName && lastName.invalid && lastName.touched">Last Name is Required</span>
+                <label>Last Name</label>
+                <input type="text" autocomplete="off" class="form-control" formControlName="lastName" placeholder="Enter Last Name">
+                <span class="errorMsg"  *ngIf="lastName && lastName.invalid && lastName.touched">Last Name is Required</span>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Email</label>
-                <input type="email" autocomplete="off" class="form-control" formControlName="email" id="exampleInputPassword1" placeholder="Enter Email">
-                <span style="color: red;" *ngIf="email && email.invalid && email.touched">Email address is invalid</span>
+                <label>Email</label>
+                <input type="email" autocomplete="off" class="form-control" formControlName="email" placeholder="Enter Email">
+                <span class="errorMsg"  *ngIf="email && email.invalid && email.touched">Email address is invalid</span>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Mobile#</label>
-                <input type="number" class="form-control" formControlName="mobileNumber" id="exampleInputPassword1" placeholder="Enter Mobile Number">
-                <span style="color: red;" *ngIf="mobileNumber && mobileNumber.invalid && mobileNumber.touched">Phone is Required</span>
+                <label>Mobile#</label>
+                <input type="number" class="form-control" formControlName="mobileNumber" placeholder="Enter Mobile Number">
+                <span class="errorMsg"  *ngIf="mobileNumber && mobileNumber.invalid && mobileNumber.touched">Phone is Required</span>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Salary</label>
-                <input type="number" class="form-control" formControlName="salary" id="exampleInputPassword1" placeholder="Enter Salary">
-                <span style="color: red;" *ngIf="salary && salary.invalid && salary.touched">Salart is Required</span>
+                <label>Salary</label>
+                <input type="number" class="form-control" formControlName="salary" placeholder="Enter Salary">
+                <span class="errorMsg"  *ngIf="salary && salary.invalid && salary.touched">Salart is Required</span>
             </div>
             <button class="submitBtn" type="button" [disabled]="userForm.invalid" class="btn btn-primary" (click)="submitForm()">Submit</button>
         </form>
